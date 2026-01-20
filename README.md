@@ -1,6 +1,6 @@
 # download_hest
 
-A Python toolkit for downloading and analyzing the HEST-1k dataset for spatial transcriptomics and histology image analysis.
+Scripts to download HEST-1k dataset files from HuggingFace.
 
 ## Files
 
