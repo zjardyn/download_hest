@@ -20,19 +20,28 @@ pip install datasets huggingface_hub tqdm pandas scanpy
 ## Setup HuggingFace Authentication
 
 1. Get your HuggingFace token from https://huggingface.co/settings/tokens
-2. Edit `download_hest.py` and set your token on line 150:
-   ```python
-   HF_TOKEN = os.getenv("HF_TOKEN", "your_token_here")
-   ```
-   
-   Or set it as an environment variable:
+
+2. **Option 1: Set as environment variable (recommended)**
    ```bash
    # Windows PowerShell
    $env:HF_TOKEN="your_token_here"
    
+   # Windows CMD
+   set HF_TOKEN=your_token_here
+   
    # Linux/Mac
    export HF_TOKEN="your_token_here"
    ```
+
+3. **Option 2: Edit the script directly**
+   Edit `download_hest.py` and set your token on line 237:
+   ```python
+   HF_TOKEN = os.getenv("HF_TOKEN", "your_token_here")
+   ```
+   
+   Replace `"your_token_here"` with your actual token.
+
+**Note:** The script checks the `HF_TOKEN` environment variable first. If not set, it uses the default value in the script. If neither is set, it will prompt you to login interactively.
 
 ## Usage
 
