@@ -1,0 +1,14 @@
+# Ignore everything except specified files
+*
+
+# But include these files
+!.gitignore
+!README.md
+!download_hest.py
+!get_image_metadata.py
+!hest_image_metadata.csv
+!image_info_lung.csv
+
+# Python cache (if any files are added later)
+__pycache__/
+*.pyc
